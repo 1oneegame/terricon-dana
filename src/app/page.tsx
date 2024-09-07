@@ -19,6 +19,7 @@ import {
   Menu,
   X,
 } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 type Book = {
@@ -175,6 +176,18 @@ export default function BookMatch() {
             onClick={() => setCurrentPage("library")}
           >
             My Library ({likedBooks.length})
+          </Button>
+          <Button
+            variant="ghost"
+            className="w-full justify-start"
+          >
+            <Link href='profile'>Profile</Link>
+          </Button>
+          <Button
+            variant="ghost"
+            className="w-full justify-start"
+          >
+            <Link href='reading'>помодоро чтение</Link>
           </Button>
         </div>
       </div>
